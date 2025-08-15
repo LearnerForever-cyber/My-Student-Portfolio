@@ -1,0 +1,476 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    background-color: rgb(0, 0, 0);
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav .left h1 {
+    font-size: 2rem;
+    color: red;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: rgb(212, 38, 38);
+}
+
+nav ul li a.active {
+    color: red;
+    font-weight: bold;
+}
+
+.firstSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 20px;
+    margin-top: 70px;
+}
+
+.leftSection {
+    max-width: 600px;
+}
+
+.leftSection div {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.red {
+    color: red;
+}
+
+#element {
+    color: orangered;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.btn {
+    background-color: transparent;
+    color: red;
+    border: 2px solid red;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: red;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.rightSection img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+}
+
+.aboutSection {
+    max-width: 1200px;
+    margin: 120px auto 50px;
+    padding: 0 20px;
+}
+
+.aboutContent {
+    text-align: center;
+}
+
+.aboutContent h2 {
+    font-size: 2.5rem;
+    color: red;
+    margin-bottom: 20px;
+}
+
+.aboutContent p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+footer {
+    background-color: rgb(15, 15, 15);
+    padding: 40px 0;
+    margin-top: 50px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer > div {
+    width: 250px;
+}
+
+.footer h3 {
+    color: red;
+    margin-bottom: 20px;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer-rights {
+    text-align: center;
+    color: rgb(75, 150, 173);
+    padding: 20px 0;
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer ul li a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.footer ul li a:hover {
+    color: rgb(212, 38, 38);
+    transform: translateX(5px);
+    display: inline-block;
+}
+
+.footer ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(212, 38, 38);
+    transition: width 0.3s ease;
+}
+
+.footer ul li a:hover::after {
+    width: 100%;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: red;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+}
+
+.scroll-to-top:hover {
+    transform: translateY(-5px);
+    background-color: rgb(212, 38, 38);
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    nav ul {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .firstSection {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 20px;
+        margin-top: 120px;
+    }
+
+    .leftSection div {
+        font-size: 2rem;
+    }
+
+    #element {
+        font-size: 1.8rem;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .rightSection {
+        margin-bottom: 50px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer > div {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+.skillsSection {
+    max-width: 1200px;
+    margin: 120px auto 50px;
+    padding: 0 20px;
+}
+
+.skillsContent {
+    text-align: center;
+}
+
+.skillsContent h2 {
+    font-size: 2.5rem;
+    color: red;
+    margin-bottom: 20px;
+}
+
+.skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.skillCard {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.skillCard:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 0, 0, 0.1);
+}
+
+.skillCard h3 {
+    color: red;
+    margin-bottom: 15px;
+}
+
+.skillCard p {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+@media screen and (max-width: 768px) {
+    .skillsGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.projectsSection {
+    max-width: 1200px;
+    margin: 120px auto 50px;
+    padding: 0 20px;
+}
+
+.projectsContent {
+    text-align: center;
+}
+
+.projectsContent h2 {
+    font-size: 2.5rem;
+    color: red;
+    margin-bottom: 20px;
+}
+
+.projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.projectCard {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.projectCard:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 0, 0, 0.1);
+}
+
+.projectCard h3 {
+    color: red;
+    margin-bottom: 15px;
+}
+
+.projectCard p {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.projectLink {
+    display: inline-block;
+    padding: 8px 20px;
+    background: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.projectLink:hover {
+    background: rgb(212, 38, 38);
+    transform: translateY(-3px);
+}
+
+@media screen and (max-width: 768px) {
+    .projectsGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contactSection {
+    max-width: 1200px;
+    margin: 120px auto 50px;
+    padding: 0 20px;
+}
+
+.contactContent {
+    text-align: center;
+}
+
+.contactContent h2 {
+    font-size: 2.5rem;
+    color: red;
+    margin-bottom: 20px;
+}
+
+.contactForm {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.formGroup {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ccc;
+}
+
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: red;
+}
+
+.submitBtn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.submitBtn:hover {
+    background: rgb(212, 38, 38);
+    transform: translateY(-3px);
+}
+
+@media screen and (max-width: 768px) {
+    .contactForm {
+        padding: 20px;
+    }
+} 
